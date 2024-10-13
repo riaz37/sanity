@@ -20,7 +20,7 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'images',
+      name: 'projectImages',
       title: 'Project Images',
       type: 'array',
       of: [{type: 'image', options: {hotspot: true}}], // Array of images
@@ -57,6 +57,11 @@ export default defineType({
       title: 'Technologies Used',
       type: 'array',
       of: [{type: 'string'}],
+    }),
+    defineField({
+      name: 'designLink',
+      title: 'Design Link',
+      type: 'url',
     }),
     defineField({
       name: 'repoLink',
