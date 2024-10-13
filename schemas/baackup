@@ -27,9 +27,8 @@ export default defineType({
     }),
     defineField({
       name: 'projectDescription',
-      title: 'Project description for SEO',
+      title: 'Project meta description for SEO',
       type: 'string',
-      validation: (Rule) => Rule.max(150).error('Description must be 150 characters or less'),
     }),
     defineField({
       name: 'projectContent',
@@ -84,14 +83,6 @@ export default defineType({
       title: 'Project Authors',
       type: 'array',
       of: [{type: 'reference', to: {type: 'member'}}],
-    }),
-    defineField({
-      name: 'companyImage',
-      title: 'Company Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
     }),
     defineField({
       name: 'publishedAt',
